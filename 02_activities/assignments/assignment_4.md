@@ -5,25 +5,44 @@
 ### Requirements:
 - We will finish this class by giving you the chance to use what you have learned in a practical context, by creating data visualizations from raw data. 
 - Choose a dataset of interest from the [City of Toronto’s Open Data Portal](https://www.toronto.ca/city-government/data-research-maps/open-data/) or [Ontario’s Open Data Catalogue](https://data.ontario.ca/). 
-- Using Python and one other data visualization software (Excel or free alternative, Tableau Public, any other tool you prefer), create two distinct visualizations from your dataset of choice.  
+- Using Python and one other data visualization software (Excel or free alternative, Tableau Public, any other tool you prefer), create two distinct visualizations from your dataset of choice.    
+Visual 1: https://github.com/michelberger-a/visualization/blob/assignment-4/02_activities/assignments/plotly_image.png   
+Visual 2: https://public.tableau.com/app/profile/alex.michelberger/viz/vaccine_coverage_map/CoverageandSummary#1
 - For each visualization, describe and justify: 
-    > What software did you use to create your data visualization?
+    > What software did you use to create your data visualization?  
+    I used python to create this image. In particular, I used the plotly package to draw this image as I wanted some interactivity.   
+    The other image, I created through Tableau. I used Tableau as its free and simple to use. 
 
-    > Who is your intended audience? 
+    > Who is your intended audience?  
+    The intended audience would be school administrators. People who work in the Toronto school boards can use this data to ensure the student population is receiving the appropriate vaccine coverage. If there are risks to identify, such as some schools which trail below along the left y-axis, the administrators can investigate to understand why there is low vaccine coverage in those schools.  
+    For the Tableau plot, a similar audience may apply, such as school administrators, but also public health workers. Users of the map may identify areas of Toronto where several schools are undercoverage, and may be worth understanding factors at play in that area. 
     
-    > What information or message are you trying to convey with your visualization? 
+    > What information or message are you trying to convey with your visualization?  
+    For this image, I am trying to convey how school size may be related to vaccine coverage. I used enrolled population along the x-axis, so as scatter points move leftward, they represent larger schools. Ideally, we would want all the data points to sit along the top of each graph, regardless of the school size. This would portray a message of ideal vaccine coverage.  
+    With this visual, I am portraying a message that highlights schools across Ontario that are performing well at vaccine coverage and schools that are underperforming. This can be identified through regions of large green circles and large red circles respectively.  
     
     > What design principles (substantive, perceptual, aesthetic) did you consider when making your visualization? How did you apply these principles? With what elements of your plots? 
+    As part of the design principles, I used colour to help identify schools which may have had low coverage rate. As a visual cue, if the data point showed a low coverage rate, colour would immediately indicate if it may be related to religion or not.  
+    For the Tableau plot, a combinatiob of aesthetic features in colour and size aid the messaging. Extreme colours identify areas of high change and size does too. THe perceptual map helps with an emotional attachement, where users may identify local neighbourhoods that affect their lives. 
     
-    > How did you ensure that your data visualizations are reproducible? If the tool you used to make your data visualization is not reproducible, how will this impact your data visualization? 
+    > How did you ensure that your data visualizations are reproducible? If the tool you used to make your data visualization is not reproducible, how will this impact your data visualization?  
+    I ensured this visualization is reproducible by utilizing written code in python. Along wiht comments, I describe briefly each step and a web-retrieval of data. By utilizing a code based image producer, many other users can just re-run the code and create the same visual.  
+    The Tableau plot is not reproducible because it was designed through Tableau. This is point and click. However, I reshaped the data through python, allowing some aspect of reproducibility to occur. With the point and click, it may be difficult to create the exact same tooltips and colour gradients, but the overall map may be easier to construct.
     
     > How did you ensure that your data visualization is accessible?  
+    To ensure accessibility, I made the data interactive. There are many small points that overlap in the imaged. People with visual impairment, may be unable to distinguish different data points. With an interactive component, users can zoom in/out, and select individual data points for a tooltip on further information.   
+    For the Tableau plot, I tried to ensure colour and size may help with identifying trends across the map, given RG colour blindness is common. I tried to include descriptive tooltips to explain the necessary data points if one has vision impairment. 
     
     > Who are the individuals and communities who might be impacted by your visualization?  
+    I think unfortunately students may be impacted by this visual. Considering some schools may have low coverage rate, administrators may want to investigate the low performance. This may unnecessarily lead to digging into student health records and asking for reasons for not vaccinating, causing a potential ethical dilemma.  
+    Similar to the python plot, student may be disproprotionately affected at underperforming schools. Health or school administrators may question students as to why they are or are not getting vaccinated, which again, is an ethical dilemma related to student privacy. Local communities may be affected if local immuno-suppressed individuals are nearby and would like to understand why some people cannot protect against diseases which those immuno-suppressed indviduals are vulnerable.   
     
-    > How did you choose which features of your chosen dataset to include or exclude from your visualization? 
+    > How did you choose which features of your chosen dataset to include or exclude from your visualization?  
+    Considering the dataset did not have many variables to select from, I only used what was necessary for the visual. Considering I wanted to look at the vaccine coverage rate, I used the the variable of the same name. I also considered variables which may have impacted coverage rate, in this case, religious exemption. Finally, I re-shaped the dataframes to create separate rows for the school year and type of vaccine.   
+    I chose those variables because I wanted to create a comparative graph over two school years. I selected the two variables comparing coverage rates in subsequent years and calculated percent differences. This set up the main visual, but I also selected supporting variables like x and y coordiantes to allow the mapping mechanism to occur. 
     
-    > What ‘underwater labour’ contributed to your final data visualization product?
+    > What ‘underwater labour’ contributed to your final data visualization product?  
+    Lots of underwater labour has gone into this dataset. Administration of nurses and the health care system to record patient information and the vaccines. Toronto Public Health workers put in labour aggregating this data for the purpose of the analysis. The Toronto information management team for organizing this data in accessible formats on their website. I will add in my own labour for reshaping and creating variables for the current map. 
 
 - This assignment is intentionally open-ended - you are free to create static or dynamic data visualizations, maps, or whatever form of data visualization you think best communicates your information to your audience of choice! 
 - Total word count should not exceed **(as a maximum) 1000 words** 
